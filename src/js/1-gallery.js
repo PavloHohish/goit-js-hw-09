@@ -90,7 +90,7 @@ const galleryMarkup = images.reduce(
 
 gallery.insertAdjacentHTML('afterbegin', galleryMarkup);
 
-var lightbox = new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
   captionsData: 'alt',
   captionPosition: 'bottom',

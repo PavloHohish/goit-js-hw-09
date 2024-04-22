@@ -11,8 +11,8 @@ if (savedState) {
 
 form.addEventListener('input', () => {
   const currentState = {
-    email: emailInput.value,
-    message: messageTextarea.value,
+    email: emailInput.value.trim(),
+    message: messageTextarea.value.trim(),
   };
   localStorage.setItem('feedback-form-state', JSON.stringify(currentState));
 });
@@ -20,8 +20,8 @@ form.addEventListener('input', () => {
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  const email = emailInput.value;
-  const message = messageTextarea.value;
+  const email = emailInput.value.trim();
+  const message = messageTextarea.value.trim();
 
   console.log({ email, message });
 
