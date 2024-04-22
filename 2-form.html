@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Homework 9</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
       href="data:text/css;base64,QGltcG9ydCB1cmwoJy4vcmVzZXQuY3NzJyk7Cgp1bCB7CiAgbWFyZ2luOiAwIGF1dG87CiAgcGFkZGluZzogMjRweCAwOwogIGxpc3Qtc3R5bGU6IG5vbmU7CgogIHdpZHRoOiAxMTI4cHg7CiAgZGlzcGxheTogZmxleDsKICBmbGV4LXdyYXA6IHdyYXA7CiAgZ2FwOiAyNHB4Owp9CgpsaSB7CiAgd2lkdGg6IGNhbGMoKDEwMCUgLSA0OHB4KSAvIDMpOwogIGhlaWdodDogMjAwcHg7CiAgcG9zaXRpb246IHJlbGF0aXZlOwp9CgphLAppbWcgewogIGRpc3BsYXk6IGJsb2NrOwogIHdpZHRoOiAxMDAlOwogIGhlaWdodDogMTAwJTsKfQoKaW1nIHsKICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC40cyBlYXNlLWluLW91dDsKfQoKYTpob3ZlciBpbWcgewogIHRyYW5zZm9ybTogc2NhbGUoMS4wNSk7Cn0KCi5iYWNrLWJ1dHRvbiB7CiAgcGFkZGluZzogNHB4IDE2cHg7CiAgYm9yZGVyOiBub25lOwogIGJvcmRlci1ib3R0b20tcmlnaHQtcmFkaXVzOiA4cHg7CiAgaGVpZ2h0OiAzNnB4OwogIHdpZHRoOiA3MnB4OwogIGJhY2tncm91bmQ6ICM0ZTc1ZmY7CgogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgZm9udC1zaXplOiAxNnB4OwogIGxpbmUtaGVpZ2h0OiAxLjU7CiAgbGV0dGVyLXNwYWNpbmc6IDAuMDRlbTsKICBjb2xvcjogI2ZmZjsKfQoKLmJhY2stYnV0dG9uOmhvdmVyLAouYmFjay1idXR0b246Zm9jdXMgewogIGJhY2tncm91bmQ6ICM2YzhjZmY7Cn0KCi5mZWVkYmFjay1mb3JtIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgbWFyZ2luOiAyNHB4IDI0cHggMTZweCAyNHB4OwogIHdpZHRoOiAzNjBweDsKICBoZWlnaHQ6IDE5MnB4Owp9CgouZmVlZGJhY2stZm9ybSBsYWJlbCB7CiAgbGluZS1oZWlnaHQ6IDEuNTsKICBsZXR0ZXItc3BhY2luZzogMC4wNGVtOwogIGNvbG9yOiAjMmUyZjQyOwp9CgouZmVlZGJhY2stZm9ybSBsYWJlbDpmaXJzdC1jaGlsZCB7CiAgbWFyZ2luLWJvdHRvbTogOHB4Owp9CgppbnB1dCB7CiAgbWFyZ2luLXRvcDogOHB4OwogIHBhZGRpbmc6IDhweCAxNnB4OwogIGJvcmRlcjogMXB4IHNvbGlkICM4MDgwODA7CiAgYm9yZGVyLXJhZGl1czogNHB4OwogIHdpZHRoOiAzNjBweDsKICBoZWlnaHQ6IDQwcHg7Cn0KCmlucHV0LAppbnB1dDo6cGxhY2Vob2xkZXIgewogIGxpbmUtaGVpZ2h0OiAxLjU7CiAgbGV0dGVyLXNwYWNpbmc6IDAuMDRlbTsKICBjb2xvcjogIzJlMmY0MjsKfQoKaW5wdXQ6aG92ZXIgewogIGJvcmRlcjogMXB4IHNvbGlkICMwMDA7Cn0KCmlucHV0OmFjdGl2ZSB7CiAgYm9yZGVyOiAxcHggc29saWQgIzgwODA4MDsKfQoKLmZlZWRiYWNrLWZvcm0gdGV4dGFyZWEgewogIG1hcmdpbi10b3A6IDhweDsKICBwYWRkaW5nOiA4cHggMTZweDsKICBib3JkZXI6IDFweCBzb2xpZCAjODA4MDgwOwogIGJvcmRlci1yYWRpdXM6IDRweDsKICB3aWR0aDogMzYwcHg7CiAgaGVpZ2h0OiA0MHB4OwogIHJlc2l6ZTogbm9uZTsKfQoKYnV0dG9uIHsKICBtYXJnaW4tdG9wOiAxNnB4OwogIHBhZGRpbmc6IDhweCAxNnB4OwogIGJvcmRlcjogbm9uZTsKICBib3JkZXItcmFkaXVzOiA4cHg7CiAgd2lkdGg6IDk1cHg7CiAgaGVpZ2h0OiA0MHB4OwogIGJhY2tncm91bmQ6ICM0ZTc1ZmY7CgogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgZm9udC1zaXplOiAxNnB4OwogIGxpbmUtaGVpZ2h0OiAxLjU7CiAgbGV0dGVyLXNwYWNpbmc6IDAuMDRlbTsKICBjb2xvcjogI2ZmZjsKfQoKYnV0dG9uOmhvdmVyLApidXR0b246Zm9jdXMgewogIGJvcmRlci1yYWRpdXM6IDhweDsKICBwYWRkaW5nOiA4cHggMTZweDsKICBoZWlnaHQ6IDQwcHg7CiAgYmFja2dyb3VuZDogIzZjOGNmZjsKfQoKLm1haW4tbGlzdCB7CiAgZGlzcGxheTogZmxleDsKICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwp9CgoubWFpbi1saXN0IGxpIHsKICBwYWRkaW5nOiA1cHggMDsKICBib3JkZXI6IG5vbmU7CiAgYm9yZGVyLXJhZGl1czogOHB4OwogIHdpZHRoOiA3MnB4OwogIGhlaWdodDogMzZweDsKICBiYWNrZ3JvdW5kOiAjNGU3NWZmOwoKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgZm9udC13ZWlnaHQ6IDUwMDsKICBsaW5lLWhlaWdodDogMS41OwogIGxldHRlci1zcGFjaW5nOiAwLjA0ZW07CiAgY29sb3I6ICNmZmY7Cn0KCi5tYWluLWxpc3QgbGk6aG92ZXIsCi5tYWluLWxpc3QgbGk6Zm9jdXMgewogIGJhY2tncm91bmQ6ICM2YzhjZmY7Cn0K"
     />
+    <script type="module" crossorigin src="/goit-js-hw-09/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/modulepreload-polyfill-3cfb730f.js">
   </head>
   <body>
-    <ul class="main-list">
-      <li><a href="./1-gallery.html">Task 1</a></li>
-      <li><a href="./2-form.html">Task 2</a></li>
-    </ul>
+    <a class="back-button" href="./index.html">Back</a>
+
+    <form class="feedback-form" autocomplete="off">
+      <label>
+        Email
+        <input type="email" name="email" autofocus />
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="8"></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    
   </body>
 </html>
