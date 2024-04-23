@@ -23,6 +23,11 @@ form.addEventListener('submit', event => {
   const email = emailInput.value.trim();
   const message = messageTextarea.value.trim();
 
+  if (!email || !message) {
+    alert('Please complete all fields!"');
+    return;
+  }
+
   console.log({ email, message });
 
   localStorage.removeItem('feedback-form-state');
